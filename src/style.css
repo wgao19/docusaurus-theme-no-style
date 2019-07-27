@@ -1,0 +1,8 @@
+/** 
+ * all the css variables
+ * there should be a better place for this
+ */
+:root {
+  --navbar-height: 2rem; /* TODO: should remove this */
+  --default-padding: 1rem;
+}
