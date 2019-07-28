@@ -12,10 +12,10 @@ import React from "react";
 const Heading = Tag => ({ id, ...props }) => (
   <Tag {...props}>
     <a aria-hidden="true" id={id} />
+    {props.children}
     <a aria-hidden="true" href={`#${id}`}>
       #
     </a>
-    {props.children}
   </Tag>
 );
 
