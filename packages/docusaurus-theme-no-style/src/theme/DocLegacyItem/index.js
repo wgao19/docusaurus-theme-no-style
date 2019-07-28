@@ -25,7 +25,7 @@ function Headings({ headings, isChild }) {
 
 function DocLegacyItem(props) {
   const { metadata, content: DocContent, docsMetadata } = props;
-
+  console.log("doc content", DocContent);
   return (
     <>
       <main>

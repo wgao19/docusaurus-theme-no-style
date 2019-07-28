@@ -7,9 +7,9 @@
 
 /* eslint-disable jsx-a11y/anchor-has-content, jsx-a11y/anchor-is-valid */
 
-import React from 'react';
+import React from "react";
 
-const Heading = Tag => ({id, ...props}) => (
+const Heading = Tag => ({ id, ...props }) => (
   <Tag {...props}>
     <a aria-hidden="true" id={id} />
     <a aria-hidden="true" href={`#${id}`}>
