@@ -1,6 +1,6 @@
 {
   "name": "@wgao19/docusaurus-theme-no-style",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Styleless theme for Docusaurus",
   "main": "src/index.js",
   "publishConfig": {
