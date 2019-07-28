@@ -8,6 +8,8 @@ This theme is a trim down from [@docusaurus/theme-classic](https://github.com/fa
 
 ## Overwriting styles for this theme
 
+The suggested way of overwriting styles for themes is by swizzling.
+
 Depending on how fine-grained you wish to overwrite the styles, you have a few options:
 
 To modify the styling without changing the DOM structure of individual components, you may swizzle the `Layout` component and update the CSS there:
