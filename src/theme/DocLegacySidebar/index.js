@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, {useState} from 'react';
-import Link from '@docusaurus/Link';
+import React, { useState } from "react";
+import Link from "@docusaurus/Link";
 
 function DocLegacySidebar(props) {
-  const {docsMetadata, sidebar} = props;
+  const { docsMetadata, sidebar } = props;
 
   if (!sidebar) {
     return null;
@@ -27,42 +27,42 @@ function DocLegacySidebar(props) {
 
     if (!linkMetadata) {
       throw new Error(
-        `Improper sidebars file, document with id '${linkID}' not found.`,
+        `Improper sidebars file, document with id '${linkID}' not found.`
       );
     }
 
     return {
-      type: 'link',
+      type: "link",
       label: linkMetadata.sidebar_label || linkMetadata.title,
-      href: linkMetadata.permalink,
+      href: linkMetadata.permalink
     };
   };
 
   const renderItem = item => {
     switch (item.type) {
-      case 'category':
+      case "category":
         return (
           <li key={item.label}>
             <a href="#!">{item.label}</a>
             <ul>{item.items.map(renderItem)}</ul>
           </li>
         );
-      case 'link':
+      case "link":
         return (
           <li key={item.label}>
             <Link to={item.href}>{item.label}</Link>
           </li>
         );
 
-      case 'ref':
+      case "ref":
       default:
         return renderItem(convertDocLink(item));
     }
   };
 
   return (
-    <aside>
-      <ul>{thisSidebar.map(item => renderItem(item, {root: true}))}</ul>
+    <aside role="docs-navigation">
+      <ul>{thisSidebar.map(item => renderItem(item, { root: true }))}</ul>
     </aside>
   );
 }

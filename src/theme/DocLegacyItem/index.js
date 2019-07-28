@@ -5,11 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
-import Head from '@docusaurus/Head';
-import DocLegacyPaginator from '@theme/DocLegacyPaginator';
+import React from "react";
+import Head from "@docusaurus/Head";
+import DocLegacyPaginator from "@theme/DocLegacyPaginator";
 
-function Headings({headings, isChild}) {
+function Headings({ headings, isChild }) {
   if (!headings.length) return null;
   return (
     <ul>
@@ -24,7 +24,7 @@ function Headings({headings, isChild}) {
 }
 
 function DocLegacyItem(props) {
-  const {metadata, content: DocContent, docsMetadata} = props;
+  const { metadata, content: DocContent, docsMetadata } = props;
 
   return (
     <>
@@ -39,7 +39,7 @@ function DocLegacyItem(props) {
         <DocLegacyPaginator docsMetadata={docsMetadata} metadata={metadata} />
       </main>
       {DocContent.rightToc && (
-        <aside>
+        <aside role="doc-toc">
           <Headings headings={DocContent.rightToc} />
         </aside>
       )}
