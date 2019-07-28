@@ -89,8 +89,14 @@ pre {
   }
   main {
     grid-area: 2 / 2 / 3 / 3;
-    /* when the page is short, grow main to reveal only 40px of footer */
-    min-height: calc(100vh - 2rem - 40px - 40px - 2rem);
+    /* 
+     * when the page is short, grow main to reveal only 40px of footer 
+     * magic numbers:
+     * 2rem - heading paddings 1rem * 2
+     * 32px - heading nav content height
+     * 46px - footer height
+     */
+    min-height: calc(100vh - 2rem - 32px - 46px - 2rem);
     padding-bottom: 2rem;
   }
   aside[role="doc-toc"] {
